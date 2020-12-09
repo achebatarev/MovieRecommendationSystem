@@ -2,4 +2,5 @@ data
 ideas.txt
 main.py
 untitled.txt
-
+.ipynb_checkpoints
+__pycache__
