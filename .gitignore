@@ -1,6 +1,7 @@
-data
 ideas.txt
 main.py
 untitled.txt
 .ipynb_checkpoints
 __pycache__
+movies_metadata.csv
+movies_metadata.csv.zip
