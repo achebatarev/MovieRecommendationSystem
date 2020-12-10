@@ -27,26 +27,6 @@ class Recommendation:
         self.similarity_score = cosine_similarity(count_matrix)
 
 # In[140]:
-app = Flask(__name__)
-data = {}
-data["content"] = ""
-
-@app.route('/', methods=['GET', 'POST'])
-def index():
-    if data:
-        return render_template('index.html', data=data)
-    return render_template('index.html')
-
-
-@app.route('/upload', methods=['GET', 'POST'])
-def upload_text():
-    
-    if request.method == 'POST':
-        similar_movie("hi",str(request.form.get("movie")))
-    return redirect(url_for('index'))
-
-if __name__ == "__main__":
-    app.run(debug=True)
 
 # In[169]:
 
