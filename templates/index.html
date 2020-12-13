@@ -10,7 +10,15 @@
             display:block;
             margin: auto;
         }
-
+        #box{
+            border: 3px solid;
+            padding: 10px;
+            box-shadow: 5px 15px 5px #888888;
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
     </style>
 
 </head>
@@ -20,7 +28,8 @@
     <input type='text' placeholder="Enter a movie" id="movie"/>
     <button class="btn btn-primary" onClick="serverCom()" id="lists">Submit</button>
 </div>
-<div>
+<div id = "box"> 
+    <h4><b><p>Recommended Movies:</p></b></h4>
     <b><p id = "movieList" class = "movieLi"></p></b>
 </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -46,6 +55,7 @@
        }
 
        document.getElementById("movieList").innerHTML = movies;
+
 }
 </script>
 </html>
