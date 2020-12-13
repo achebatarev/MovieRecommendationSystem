@@ -8,10 +8,8 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
-from flask import Flask, render_template, request, redirect, url_for
 from werkzeug.utils import secure_filename
 import os
-from tensor import Inference
 
 
 # In[139]:
@@ -30,13 +28,11 @@ class Recommendation:
 
 # In[169]:
 
-
     def index_to_title(self, index):
         return ''.join(self.df.loc[index, ['title']].tolist())
 
 
 # In[172]:
-
 
     def similar_movie(self, movie):
         movie_id = self.df.title[self.df.title == movie].index.tolist()
