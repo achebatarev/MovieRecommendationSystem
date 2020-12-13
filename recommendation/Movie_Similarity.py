@@ -8,6 +8,10 @@ import pandas as pd
 import numpy as np
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
+from flask import Flask, render_template, request, redirect, url_for
+from werkzeug.utils import secure_filename
+import os
+from tensor import Inference
 
 
 # In[139]:
@@ -23,7 +27,6 @@ class Recommendation:
         self.similarity_score = cosine_similarity(count_matrix)
 
 # In[140]:
-
 
 # In[169]:
 
