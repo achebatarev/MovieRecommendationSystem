@@ -1,3 +1,4 @@
+from waitress import serve
 from recommendation.Movie_Similarity import Recommendation
 from flask import Flask, render_template, request, redirect, url_for, jsonify
 from werkzeug.utils import secure_filename
@@ -25,4 +26,6 @@ def upload_text():
 
 
 if __name__ == "__main__":
-    app.run()
+    app.debug = False
+    port = int(os.environ.get('PORT', 33507))
+    waitress.serve(app, port=port)
